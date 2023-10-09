@@ -15,56 +15,56 @@
     </header>
 
     <section>
-      <h3>
-        First Class Function
-      </h3>
+      <h3>First Class Function</h3>
       <p>This function converts lowercase into uppercase.</p>
       <h5>Click "Convert" to run the application</h5>
-      <button id="firstClassButton">
-        Convert
-      </button>
-      <div id="firstClassResult"></div> 
+      <button id="firstClassButton">Convert</button>
+      <div id="firstClassResult"></div>
     </section>
 
     <section>
-      <h3>
-        Higher Order Function
-      </h3>
+      <h3>Higher Order Function</h3>
       <p>This function multiplies two numbers together.</p>
       <h5>Click "Multiply" to run the application</h5>
-      <button id="multiplyButton">
-        Multiply
-      </button>
-      
+      <button id="multiplyButton">Multiply</button>
       <div id="multiplyResult"></div>
     </section>
     
     <section>
       <h3>Curving Function</h3>
       <p>This function formats an appropriate URL.</p>
-      
+
       <form id="urlForm">
-        <label for="protocol">Protocol:</label>
-        <input type="text" id="protocol" placeholder="https">
-    
-        <label for="subdomain">Subdomain:</label>
-        <input type="text" id="subdomain" placeholder="www">
-    
-        <label for="domain">Domain:</label>
-        <input type="text" id="domain" placeholder="website name">
-    
-        <label for="tld">TLD:</label>
-        <input type="text" id="tld" placeholder="com">
-    
-        <label for="endpoint">Endpoint:</label>
-        <input type="text" id="endpoint" placeholder="api/endpoint">
-        
+        <div class="input-group">
+          <label for="protocol">Protocol:</label>
+          <input type="text" id="protocol" placeholder="https">
+        </div>
+
+        <div class="input-group">
+          <label for="subdomain">Subdomain:</label>
+          <input type="text" id="subdomain" placeholder="www">
+        </div>
+
+        <div class="input-group">
+          <label for="domain">Domain:</label>
+          <input type="text" id="domain" placeholder="website name">
+        </div>
+
+        <div class="input-group">
+          <label for="tld">TLD:</label>
+          <input type="text" id="tld" placeholder="com">
+        </div>
+
+        <div class="input-group">
+          <label for="endpoint">Endpoint:</label>
+          <input type="text" id="endpoint" placeholder="api/endpoint">
+        </div>
+
         <h5>Click "Build URL" to run the application</h5>
         <button type="button" id="buildButton">Build URL</button>
       </form>
       <div id="urlResult"></div>
     </section>
-
   </div>
   <script src="index.js"></script>
 </body>
