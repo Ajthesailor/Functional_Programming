@@ -1,105 +1,91 @@
-// Defines a function to convert a string to uppercase
-function convertToUppercase(inputString) {
-  return inputString.toUpperCase();
+/* Base styles for all screen sizes */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: darkgoldenrod;
 }
 
-// Assigns the function to a variable
-const convertFunction = convertToUppercase;
+.container {
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin: 0 auto; /* Center the container horizontally */
+}
 
-// Gets references to the button and result div for First-Class Function
-const firstClassButton = document.getElementById("firstClassButton");
-const firstClassResultDiv = document.getElementById("firstClassResult");
+.primary-color {
+  color: goldenrod;
+}
 
-// Attaches the function to the button click event for First-Class Function
-firstClassButton.addEventListener("click", function() {
-  const originalString = prompt("Enter words in lowercase: ");
-  const uppercaseString = convertFunction(originalString);
+button {
+  background-color: palegoldenrod;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
 
-  // Displays the result for First-Class Function
-  firstClassResultDiv.textContent = `${uppercaseString}`;
-});
+button:hover {
+  background-color: darkgoldenrod;
+}
 
-// Gets references to the button and result div for Multiply Function
-const multiplyButton = document.getElementById("multiplyButton");
-const multiplyResultDiv = document.getElementById("multiplyResult");
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px;
+  width: 100%; /* Make inputs expand to full width */
+}
 
-// Attaches the function to the button click event for Multiply Function
-multiplyButton.addEventListener("click", function() {
-  const factor = parseFloat(prompt("Enter a number: "));
+#firstClassResult,
+#multiplyResult,
+#urlResult {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: grey;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  if (isNaN(factor)) {
-    alert("Please enter a valid number.");
-    return;
+section h3 {
+  font-size: 20px;
+  color: goldenrod;
+  margin-bottom: 10px;
+}
+
+section h5 {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens with a maximum width of 600px (small screens) */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%; /* Full width for small screens */
+    padding: 10px; /* Reduce padding for small screens */
   }
 
-  const multiplier = createMultiplier(factor);
-  const inputValue = parseFloat(prompt("Enter a number to multiply: "));
-
-  if (isNaN(inputValue)) {
-    alert("Please enter a valid number.");
-    return;
+  button {
+    font-size: 14px; /* Reduce font size for buttons on small screens */
   }
-
-  const result = multiplier(inputValue);
-
-  // Display the result for Multiply Function
-  multiplyResultDiv.textContent = `${factor} * ${inputValue} = ${result}`;
-});
-
-// Function to create a multiplier function for Multiply Function
-function createMultiplier(factor) {
-  return function (number) {
-    return factor * number;
-  };
 }
 
-// Curving Function
-
-function converToUrl() {
-  var url = "";
-
-  return function (protocol, subdomain, domain, tld, endpoint) {
-    // Concatenates the "protocol"
-    url += protocol;
-    // Adds "://"
-    url += "://";
-
-    // Concatenates the "subdomain"
-    url += subdomain;
-    // Adds "."
-    url += ".";
-
-    // Concatenates the "domain"
-    url += domain;
-    // Adds "."
-    url += ".";
-    
-    // Concatenates the "tld"
-    url += tld;
-    // Adds "/"
-    url += "/";
-
-    // Concatenates the "endpoint"
-    url += endpoint;
-
-    return url;
-  };
-}
-
-// Assigns variable for new URL
-const convertedUrl = converToUrl();
-
-
-const buildButton = document.getElementById("buildButton");
-const urlResultDiv = document.getElementById("urlResult");
-
-buildButton.addEventListener("click", function () {
-  const protocol = document.getElementById("protocol").value;
-  const subdomain = document.getElementById("subdomain").value;
-  const domain = document.getElementById("domain").value;
-  const tld = document.getElementById("tld").value;
-  const endpoint = document.getElementById("endpoint").value;
-
-  const finalUrl = convertedUrl(protocol, subdomain, domain, tld, endpoint);
-  urlResultDiv.textContent = finalUrl;
-});

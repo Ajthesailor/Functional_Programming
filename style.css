@@ -89,15 +89,3 @@ section p {
   color: #333;
 }
 
-/* Media Query for Small Screens */
-@media (max-width: 600px) {
-  .container {
-    max-width: 100%; /* Full width for small screens */
-    padding: 10px; /* Reduce padding for small screens */
-  }
-
-  /* Reduce font size for buttons on small screens */
-  button {
-    font-size: 14px;
-  }
-}
