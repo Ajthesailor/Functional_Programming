@@ -3,7 +3,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   margin: 0;
   background: darkgoldenrod;
 }
@@ -111,6 +110,4 @@ section p {
     font-size: 14px;
     padding: 5px 10px;
   }
-  
 }
-
