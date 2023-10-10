@@ -53,7 +53,7 @@ function createMultiplier(factor) {
   };
 }
 
-// Curving Function
+// Currying Function
 
 function converToUrl() {
   var url = "";
